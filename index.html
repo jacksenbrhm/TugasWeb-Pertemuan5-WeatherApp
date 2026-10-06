@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="weather-app">
+    <h1 class="weather-app__title">🌤️ Weather App</h1>
+
+    <!-- Search Form -->
+    <form id="searchForm" class="search">
+      <input type="text" id="cityInput" class="search__input" placeholder="Masukkan nama kota..." autocomplete="off" aria-label="Nama kota">
+      <button type="submit" class="search__btn">Cari</button>
+    </form>
+
+    <!-- Riwayat pencarian (Bonus: LocalStorage) -->
+    <section class="history" aria-label="Riwayat pencarian">
+      <h2 class="history__title">Riwayat</h2>
+      <ul id="historyList" class="history__list"></ul>
+    </section>
+
+    <!-- Loading State -->
+    <div id="loading" class="status status--loading hidden" role="status">⏳ Memuat data...</div>
+
+    <!-- Error Message -->
+    <div id="error" class="status status--error hidden" role="alert"></div>
+
+    <!-- Weather Result -->
+    <section id="weatherResult" class="result hidden" aria-live="polite">
+      <h2 id="cityName" class="result__city"></h2>
+      <img id="weatherIcon" class="result__icon" alt="Ikon cuaca">
+      <p id="temperature" class="result__temp"></p>
+      <p id="description" class="result__desc"></p>
+      <ul class="result__details">
+        <li id="humidity"></li>
+        <li id="wind"></li>
+      </ul>
+      <!-- Bonus: toggle °C/°F -->
+      <button type="button" id="unitToggle" class="result__toggle">Ubah ke °F</button>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
