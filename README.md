@@ -15,10 +15,3 @@ Weather App menggunakan **OpenWeatherMap API** (HTML, CSS, JavaScript ES6+).
 | 7 | Min. 1 array method | `map` dan `filter` pada riwayat pencarian |
 | 8 | UI responsif | Mobile-first, `clamp()`, flexbox |
 
-**Bonus:** riwayat pencarian (LocalStorage) dan toggle °C/°F.
-
-## Cara Menjalankan
-
-1. Daftar di [openweathermap.org](https://openweathermap.org) dan ambil API key.
-2. Salin `config.example.js` menjadi `config.js`, lalu isi `API_KEY`.
-3. Buka `index.html` dengan Live Server.
